@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><title>图片放大预览</title>
+<script src="https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.js"></script>
+<style>
+*{box-sizing:border-box}html,body{height:100%;margin:0;font:14px 'Microsoft YaHei',sans-serif;background:#25282d;color:#eee}body{display:flex;flex-direction:column}.bar{padding:9px;display:flex;gap:8px;align-items:center;background:#33383e}button{padding:5px 12px;cursor:pointer}#status{margin-left:auto;color:#ddd}#view{position:relative;overflow:hidden;flex:1;touch-action:none;cursor:grab}#view.dragging{cursor:grabbing}#photo{position:absolute;max-width:none;max-height:none;transform-origin:0 0;user-select:none;pointer-events:none}#message{position:absolute;inset:0;display:grid;place-items:center;color:#ddd;pointer-events:none;text-align:center;padding:20px}
+.bar{flex-wrap:wrap}.bar span{font-size:12px}.nav{position:absolute;top:50%;transform:translateY(-50%);z-index:2;width:40px;height:60px;padding:8px;border:0;border-radius:8px;background:rgba(0,0,0,.48);color:#fff;cursor:pointer}.nav:hover:not(:disabled){background:rgba(0,0,0,.8)}.nav:disabled{opacity:.22;cursor:default}.nav:focus-visible{outline:2px solid #6eb1ff}.nav svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.previous{left:12px}.next{right:12px}
+</style></head><body>
+<div class="bar"><button id="fit">适应窗口</button><button id="actual">100%</button><span>滚轮缩放 · 按住左键拖动 · Esc 关闭</span><span id="status"></span></div>
+<div id="view"><img id="photo" alt="预览图片" draggable="false"><div id="message">正在读取选中的图片……</div>
+<button class="nav previous" id="previous" title="上一张（←）" aria-label="上一张" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+<button class="nav next" id="next" title="下一张（→）" aria-label="下一张" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button></div>
+<script src="preview.js"></script></body></html>

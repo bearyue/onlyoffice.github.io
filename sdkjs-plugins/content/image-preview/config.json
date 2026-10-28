@@ -1,0 +1,20 @@
+{
+  "name": "图片放大预览",
+  "guid": "asc.{DF73FBC8-BE68-42C7-9E5E-56D7A9DE86BB}",
+  "version": "1.5.0",
+  "minVersion": "10.0.0",
+  "variations": [{
+    "description": "图片浮动按钮与右键查看大图",
+    "url": "background.html",
+    "icons": ["icon.png", "icon@2x.png"],
+    "EditorsSupport": ["word"],
+    "type": "system",
+    "isSystem": true,
+    "isVisual": false,
+    "isViewer": false,
+    "initDataType": "none",
+    "initData": "",
+    "buttons": [],
+    "events": ["onContextMenuShow", "onContextMenuClick", "onWindowHeaderMenuClick", "onFloatActionButtonClick", "onClick", "onTargetPositionChanged", "onDocumentContentReady"]
+  }]
+}
